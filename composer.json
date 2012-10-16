@@ -1,0 +1,10 @@
+{
+    "require": {
+        "dannykopping/spore": "dev-develop",
+		"slim/extras": "dev-master",
+		"twig/twig": "dev-master",
+        "gabordemooij/redbean": "dev-master",
+        "dflydev/markdown": "v1.0.2"
+    },
+    "minimum-stability": "dev"
+}

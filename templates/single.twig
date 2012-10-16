@@ -1,0 +1,47 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+	{% if data|length < 1 %}
+		<div class="hero-unit">
+			<h1>Error: Cannot find provided code</h1>
+		</div>
+	{% else %}
+		<div class="container-fluid">
+			<div class="span12">
+				<div class="span10">
+					<h1>{{ data[0].code }}
+						<small>{{ data[0].message }}</small>
+					</h1>
+				</div>
+				<div class="span2">
+					<div class="container-fluid pull-right well-large">
+						<span class="label label-{{ data[0].class.name|parseType }}">{{ data[0].class.name }}</span>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="container-fluid">
+			<div class="well">
+				<h4>Description:</h4>
+
+				{{ data[0].description|raw }}
+			</div>
+		</div>
+
+		<div class="container-fluid">
+			<div class="well">
+				<h4>Class Description:</h4>
+
+				{{ data[0].class.description|raw }}
+			</div>
+		</div>
+
+		{% if data[0].extra|length > 0 %}
+			<div class="container-fluid info alert alert-info">
+				For more info: <a href="{{ data[0].extra }}">{{ data[0].extra }}</a>
+			</div>
+		{% endif %}
+	{% endif %}
+{% endblock %}
