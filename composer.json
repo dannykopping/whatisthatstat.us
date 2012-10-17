@@ -1,6 +1,6 @@
 {
     "require": {
-        "dannykopping/spore": "dev-develop",
+        "dannykopping/spore": "1.*",
 		"slim/extras": "dev-master",
 		"twig/twig": "dev-master",
         "gabordemooij/redbean": "dev-master",
