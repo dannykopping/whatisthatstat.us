@@ -4,7 +4,7 @@
 	require_once "../vendor/gabordemooij/redbean/RedBean/redbean.inc.php";
 
 	use Spore\Spore;
-	use ActiveRecord\Config;
+	//use ActiveRecord\Config;
 	use Slim\Extras\Views\Twig;
 
 	$dbLocation = realpath("../db/data.sqlite");
